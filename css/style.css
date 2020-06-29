@@ -24,13 +24,12 @@
 
 body {
     font-family: nunito-regular, arial;
-    padding-top: 39px;
     background-color: #fff;
     user-select: none;
 }
 
 .header {
-    padding: 8px;
+    padding: 8px 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -100,7 +99,7 @@ body {
     padding-right: 10px !important;
     text-align: center;
     border: 1px solid transparent;
-    padding: 2px;
+    padding: 5px 0;
     transition: 0.3s;
 }
 
@@ -110,19 +109,20 @@ body {
 
 /* -------------push-your-life----------------- */
 .push-your-life {
+    padding: 44px 50px 0 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgb(250, 249, 246);
 }
 
 .push-life-text {
     flex-direction: column;
-    padding: 30px 8px 0 8px;
+    padding: 30px 0;
 }
 
 .push-img {
-    padding: 30px 8px 0 8px;
+    /* padding: 30px 0; */
 }
 
 .push-title {
@@ -197,12 +197,14 @@ body {
 .help-you {
     flex-direction: column;
     text-align: center;
-    padding: 30px 8px 0 8px;
+    padding: 0 50px;
 }
 
 .help-title {
     color: #212529;
     font-size: 25px;
+    margin: 0;
+    padding-top: 20px;
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
 }
@@ -211,11 +213,16 @@ body {
     font-family: nunito-regular, arial;
     color: rgba(0, 0, 0, .5);
     transition: 0.5s;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .help-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
 }
 
 .help-sect {
@@ -223,8 +230,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    margin: 15px;
+    margin: 0 5px;
+    padding: 0;
+    /* width: 30%; */
+    /* margin: 15px; */
+}
+
+.help-sect-title {
+    color: #212529;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-family: nunito-bold, arial;
+    padding-top: 10px;
+}
+
+.help-sect:after {
+    content: '';
+    width: 40%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .4);
+    margin-bottom: 20px;
 }
 
 .help-icon {
@@ -236,6 +261,10 @@ body {
     fill: #f4b200;
 }
 
+.help-sect:hover.help-sect:after {
+    background-color: #f4b200;
+}
+
 .help-sect:hover .help-text {
     color: rgba(0, 0, 0, .9);
 }
@@ -243,20 +272,22 @@ body {
 /* ---------------about-me---------------- */
 
 .about-me {
+    padding: 0 50px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: rgb(250, 249, 246);
 }
 
 .about-img {
-    padding: 30px 8px 30px 8px;
+    padding: 20px 0;
 }
 
 .about-text {
     flex-direction: column;
-    padding: 30px 8px 0 8px;
-    width: 40%;
+    /* padding: 30px 8px 0 8px; */
+    /* width: 40%; */
+    padding-left: 30px;
 }
 
 .about-title {
@@ -276,15 +307,16 @@ body {
 
 .education {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(250, 249, 246);
-    padding: 0px 8px 30px 8px;
+    padding: 0 50px;
 }
 
 .education-icon {
     fill: rgba(0, 0, 0, .5);
     transition: 0.5s;
+    margin: 0;
+    padding: 0;
 }
 
 .education-schooling:hover .education-icon {
@@ -305,12 +337,16 @@ body {
 
 .education-schooling {
     display: flex;
-    width: 45%;
+    width: 49%;
+    margin: 0;
+    padding: 0;
 }
 
 .education-patent {
     display: flex;
-    width: 45%;
+    width: 49%;
+    margin: 0;
+    padding: 0;
 }
 
 .education-title {
@@ -320,7 +356,15 @@ body {
     font-family: nunito-bold, arial;
 }
 
+.education-txt {
+    padding-left: 10px;
+}
 
+.education-list {
+    margin: 0;
+    margin-left: 15px;
+    padding: 10px 0;
+}
 
 .education-catalog {
     letter-spacing: 1.3px;
@@ -334,9 +378,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 30px 8px 30px 8px;
+    padding: 0 50px;
 }
 
 .directions-title {
@@ -344,16 +387,12 @@ body {
     font-size: 25px;
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
-    padding-bottom: 15px;
+    padding: 20px 0;
 }
 
 .directions-item {
     width: 50%;
     background-color: rgb(250, 249, 246);
-}
-
-.direction-item {
-    padding: 0 12px;
 }
 
 summary {
@@ -421,10 +460,11 @@ details[open]:last-child ul {
 
 .direction-link {
     background-color: rgb(250, 249, 246);
-    padding: 30px;
+    padding: 20px;
     align-items: center;
     width: 50%;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 /* --------------------Price--------------------- */
@@ -435,7 +475,7 @@ details[open]:last-child ul {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 8px 30px 8px;
+    padding: 0 50px;
     background-color: rgb(250, 249, 246);
 }
 
@@ -444,7 +484,7 @@ details[open]:last-child ul {
     font-size: 25px;
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
-    padding-bottom: 15px;
+    padding-top: 20px;
     width: 100%;
     text-align: center;
 }
@@ -452,7 +492,13 @@ details[open]:last-child ul {
 .price-service {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.service-price {
+    width: 48%;
+    padding-top: 10px;
 }
 
 .service-title {
@@ -468,13 +514,16 @@ details[open]:last-child ul {
 .sevice-txt {
     letter-spacing: 1.3px;
     font-family: nunito-regular, arial;
-    color: rgba(0, 0, 0, .7);
+    color: rgba(0, 0, 0, .5);
     font-size: 12px;
     border-top: 1px solid rgba(0, 0, 0, .5);
-    ;
     padding-bottom: 5px;
     padding-top: 5px;
     margin-top: 5px;
+}
+
+.service-min:hover .sevice-txt {
+    color: rgba(0, 0, 0, .9);
 }
 
 /* -----------reviews----------------- */
@@ -485,7 +534,7 @@ details[open]:last-child ul {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 8px 30px 8px;
+    padding: 0 50px;
 }
 
 .reviews-title {
@@ -493,7 +542,7 @@ details[open]:last-child ul {
     font-size: 25px;
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
-    padding-bottom: 15px;
+    padding-top: 20px;
     width: 100%;
     text-align: center;
 }
@@ -501,24 +550,44 @@ details[open]:last-child ul {
 .rewiews-txt {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
 }
 
 .review {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin: 10px;
+    width: 300px;
+    padding: 10px;
     text-align: center;
-    border: 1px solid;
-    box-sizing: border-box;
-    /* flex-grow: 2; */
 }
 
 .rewiew-title {
     display: flex;
+    justify-content: left;
+    padding-left: 10px;
 }
 
 .review-avatar {
     width: 20px;
     height: 20px;
+    border-radius: 50%;
+}
+
+.reviews-name {
+    padding-left: 10px!important;
+    color: rgba(0, 0, 0, .9);
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-family: nunito-bold, arial;
+}
+
+.review-story {
+    text-align: justify;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    font-family: nunito-regular, arial;
+    color: rgba(0, 0, 0, .7);
+    padding-top: 5px;
 }
