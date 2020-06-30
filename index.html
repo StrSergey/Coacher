@@ -7,28 +7,33 @@
   <title>Психологическое консультирование</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <div>
+      <a href="#home" class="to-top header-list-link">
+      </a>
+    </div>
     <div class="header">
       <div class="logo">Coacher</div>
       <div class="header-nav">
         <div class="header-list">
-          <div><a href="#" class="header-list-link active">Home</a></div>
-          <div><a href="#" class="header-list-link">Help for You</a></div>
-          <div><a href="#" class="header-list-link">About Me</a></div>
-          <div><a href="#" class="header-list-link">My Education</a></div>
-          <div><a href="#" class="header-list-link">Directions</a></div>
-          <div><a href="#" class="header-list-link">Price</a></div>
-          <div><a href="#" class="header-list-link">Stories</a></div>
-          <div><a href="#" class="header-list-link">Contact</a></div>
+          <div><a href="#home" class="header-list-link active">Home</a></div>
+          <div><a href="#help" class="header-list-link">Help for You</a></div>
+          <div><a href="#about" class="header-list-link">About Me</a></div>
+          <div><a href="#education" class="header-list-link">My Education</a></div>
+          <div><a href="#directions" class="header-list-link">Directions</a></div>
+          <div><a href="#price" class="header-list-link">Price</a></div>
+          <div><a href="#stories" class="header-list-link">Stories</a></div>
+          <div><a href="#contact" class="header-list-link">Contact</a></div>
         </div>
         <a href="#" class="header-list-btn">Meet me</a>
       </div>
     </div>
     <main class="content">
-      <section class="push-your-life">
+      <section class="push-your-life" id="home">
         <div class="push-life-text">
           <h2 class="push-title">Push Your Life To a New Level</h2>
           <p class="push-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, inventore?</p>
@@ -37,7 +42,7 @@
         </div>
         <img class="push-img" src="img/front-foto.jpg" alt="foto" width="250" height=""></img>
       </section>
-      <section class="help-you">
+      <section class="help-you" id="help">
         <h2 class="help-title">How Can I Help You</h2>
         <p class="help-text">We can discuss your problems</p>
         <div class="help-section">
@@ -64,7 +69,7 @@
           </div>
         </div>
       </section>
-      <section class="about-me">
+      <section class="about-me" id="about">
         <img class="about-img" src="img/front-foto.jpg" alt="foto" width="250" height=""></img>
         <div class="about-text">
           <h2 class="about-title">About me</h2>
@@ -72,7 +77,7 @@
             повышению эмоционального интеллекта.</p>
         </div>
       </section>
-      <section class="education">
+      <section class="education" id="education">
         <div class="education-schooling">
           <svg class="education-icon" width="150" height="70">
             <use xlink:href="img/icons.svg#certificate"></use>
@@ -103,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="directions">
+      <section class="directions" id="directions">
         <div class="directions-title">С какими направлениями работаю</div>
         <div class="directions-item">
           <details class="direction-item">
@@ -151,7 +156,7 @@
           <a href="#" class="meet-me">Оставить заявку</a>
         </div>
       </section>
-      <section class="price">
+      <section class="price" id="price">
         <div class="price-title">Услуги и цены</div>
         <div class="price-service">
           <div class="service-price">
@@ -188,7 +193,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="stories">
         <div class="reviews-title">Истории успеха</div>
         <div class="rewiews-txt">
           <div class="review">
@@ -196,42 +201,54 @@
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
+              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
+              aspernatur nostrum debitis amet modi fugiat?</div>
           </div>
         </div>
       </section>
@@ -239,6 +256,36 @@
     <footer class="footer">
     </footer>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("a.header-list-link").click(function () {
+        $("html, body").animate({
+          scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+          duration: 1000,
+          easing: "swing"
+        });
+        return false;
+      });
+    });
+
+    jQuery(window).scroll(function () {
+      var $sections = $('section');
+      $sections.each(function (i, el) {
+        var top = $(el).offset().top - 100;
+        var bottom = top + $(el).height();
+        var scroll = $(window).scrollTop();
+        var id = $(el).attr('id');
+        if (scroll > top && scroll < bottom) {
+          $('a.active').removeClass('active');
+          $('a[href="#' + id + '"]').addClass('active');
+        }
+      })
+    });
+  </script>
+
 </body>
 
 </html>

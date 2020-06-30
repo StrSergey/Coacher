@@ -28,6 +28,34 @@ body {
     user-select: none;
 }
 
+.to-top {
+    box-sizing: border-box;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    border: none!important;
+}
+
+.to-top:after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid rgba(0, 0, 0, .5);
+    border-left: 2px solid rgba(0, 0, 0, .5);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 4px;
+    bottom: -4px;
+}
+
+.to-top:hover:after {
+    border-top: 2px solid #f4b200;
+    border-left: 2px solid #f4b200;
+}
+
 .header {
     padding: 8px 50px;
     position: fixed;
@@ -72,7 +100,6 @@ body {
     padding: 0px 10px 0px 10px;
     cursor: pointer;
     color: rgba(0, 0, 0, .5);
-    transition: 0.5s;
 }
 
 .header-list-link.active {
@@ -82,6 +109,7 @@ body {
 
 .header-list-link:hover {
     color: rgba(0, 0, 0, .9);
+    border-bottom: 1.5px solid rgba(0, 0, 0, .9);
 }
 
 .header-list-btn {
