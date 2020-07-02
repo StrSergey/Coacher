@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
@@ -195,51 +197,41 @@
       </section>
       <section class="reviews" id="stories">
         <div class="reviews-title">Истории успеха</div>
-        <div class="rewiews-txt">
+        <div class="single-slide">
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
-              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
-              aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis vel officiis earum, voluptatem dolorem nihil quasi facere esse beatae assumenda? Ab quae, delectus quo aliquam voluptatum repellat adipisci expedita cumque.</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
-              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
-              aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero odio optio quaerat a cum dicta quae nobis sit saepe soluta eaque, consequuntur alias impedit iure odit deserunt harum vitae fugiat porro. Aspernatur ratione perspiciatis magnam quaerat eligendi ullam, vitae similique numquam laboriosam. Enim labore iusto perferendis eius! Maiores eveniet sequi aperiam corporis? Blanditiis voluptas sunt, quasi sed nihil totam?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
-              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
-              aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ratione velit nobis quia accusamus deserunt aperiam minima quo provident veritatis rerum, eius vel, laudantium commodi! Alias provident laudantium quasi, culpa animi deserunt quod tempora ex, id harum aliquam soluta recusandae!</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
-              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
-              aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet inventore officiis illum dicta aperiam?</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
               <img src="img/avatar.png" alt="avatar" class="review-avatar">
               <div class="reviews-name">Анна</div>
             </div>
-            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni expedita
-              placeat natus? Aperiam quod voluptas neque exercitationem, esse facere iste voluptatum, eveniet, fuga
-              aspernatur nostrum debitis amet modi fugiat?</div>
+            <div class="review-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio odit ratione tempora. Quos magnam deserunt, veritatis corrupti adipisci dicta excepturi cupiditate quibusdam, nostrum, provident atque laudantium perspiciatis! Atque corrupti distinctio repudiandae ipsam earum illo. Ex excepturi, provident assumenda recusandae iste exercitationem facilis accusantium vitae totam.</div>
           </div>
           <div class="review">
             <div class="rewiew-title">
@@ -252,11 +244,66 @@
           </div>
         </div>
       </section>
+      <!----- slick-slider start----->
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script>
+        $('.single-slide').slick({
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          pauseOnHover: true,
+          autoplaySpeed: 3000,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true,
+          responsive: [{
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      </script>
+      <!----- slick-slider end----->
+      <section class="decided">
+        <div class="decided-title">Still Not Decided?</div>
+        <div class="decided-item">Individual consultation is right for you</div>
+        <a href="#" class="learn-more">Ask for Individual Consultation</a>
+      </section>
+      <section class="video">
+        <div class="video-title">Example video</div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1oIJspH6Qgo" frameborder="0" allow="accelerometer; autoplay=0; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="videoPoster js-videoPoster"></button>
+      </section>
     </main>
     <footer class="footer">
     </footer>
   </div>
-
+  <!---------- smooth scrolling start------------>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -285,7 +332,7 @@
       })
     });
   </script>
-
+  <!---------- smooth scrolling end------------>
 </body>
 
 </html>
