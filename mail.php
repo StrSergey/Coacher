@@ -37,5 +37,6 @@ if(!$mail->send()) {
     echo 'Error';
 } else {
     header('location: index.html');
+    // echo '<p style="color: green;">Ваше сообщение отправлено</p>';
 }
 ?>

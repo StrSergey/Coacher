@@ -35,7 +35,7 @@ body {
     bottom: 20px;
     width: 30px;
     height: 30px;
-    border: none!important;
+    border: none !important;
 }
 
 .to-top:after {
@@ -597,7 +597,7 @@ details[open]:last-child ul {
 }
 
 .reviews-name {
-    padding-left: 10px!important;
+    padding-left: 10px !important;
     color: rgba(0, 0, 0, .9);
     font-size: 15px;
     letter-spacing: 1.3px;
@@ -665,3 +665,161 @@ details[open]:last-child ul {
     text-align: center;
 }
 
+/* ----- contact ----- */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px;
+    background-color: rgb(250, 249, 246);
+}
+
+.contact-title {
+    color: #212529;
+    font-size: 25px;
+    letter-spacing: 1.3px;
+    font-family: nunito-bold, arial;
+    padding-top: 44px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.contact-my,
+.contact-form {
+    width: 48%;
+    padding-top: 10px;
+}
+
+.my-title,
+.form-title {
+    color: rgba(0, 0, 0, .9);
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-family: nunito-bold, arial;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.my-txt {
+    letter-spacing: 1.3px;
+    font-family: nunito-regular, arial;
+    color: rgba(0, 0, 0, .5);
+    font-size: 15px;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    user-select: all;
+    display: flex;
+    text-decoration: none;
+}
+
+.my-txt:hover {
+    color: #f4b200;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    letter-spacing: 1.3px;
+    font-family: nunito-regular, arial;
+    color: rgba(0, 0, 0, .5);
+    font-size: 15px;
+    padding-bottom: 2px;
+    margin-top: 5px;
+    user-select: text;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #f4b200;
+}
+
+.form-group:hover label {
+    color: #f4b200;
+}
+
+textarea {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    padding: 5px;
+}
+
+textarea:focus {
+    border: 1px solid #f4b200;
+}
+
+
+.form__error {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+input:invalid:not(:placeholder-shown)+.form__error {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+/* ----- footer ----- */
+
+.footer {
+    display: flex;
+    padding: 10px 50px;
+}
+
+.footer-txt {
+    color: rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    font-family: nunito-bold, arial;
+    width: 100%;
+    text-align: center;
+}
