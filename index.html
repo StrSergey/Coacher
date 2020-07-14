@@ -16,11 +16,17 @@
   <div class="container">
     <div>
       <a href="#home" class="to-top header-list-link">
+        <svg class="to-top-icon" width="30" height="30">
+          <use xlink:href="img/icons.svg#up-arrow"></use>
+        </svg>
       </a>
     </div>
+    
     <div class="header">
+      
       <div class="logo">Coacher</div>
       <div class="header-nav">
+        <div class="progress" id="myBar"></div>
         <div class="header-list">
           <div><a href="#home" class="header-list-link active">Home</a></div>
           <div><a href="#help" class="header-list-link">Help for You</a></div>
@@ -36,13 +42,19 @@
     </div>
     <main class="content">
       <section class="push-your-life" id="home">
-        <div class="push-life-text">
-          <h2 class="push-title">Push Your Life To a New Level</h2>
-          <p class="push-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, inventore?</p>
-          <a href="#" class="learn-more">Узнать больше</a>
-          <a href="#" class="meet-me">Оставить заявку</a>
+        <div class="push-your">
+          <div class="push-life-text">
+            <h2 class="push-title">Push Your Life To a New Level</h2>
+            <p class="push-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, inventore?</p>
+            <a href="#" class="learn-more">Узнать больше</a>
+            <a href="#" class="meet-me">Оставить заявку</a>
+          </div>
         </div>
-        <img class="push-img" src="img/front-foto.jpg" alt="foto" width="250" height=""></img>
+        <div class="push-back">
+          <div class="back-right"></div>
+          <div class="back-left"></div>
+          <div class="back-women"></div>
+        </div>
       </section>
       <section class="help-you" id="help">
         <h2 class="help-title">How Can I Help You</h2>
@@ -72,7 +84,8 @@
         </div>
       </section>
       <section class="about-me" id="about">
-        <img class="about-img" src="img/front-foto.jpg" alt="foto" width="250" height=""></img>
+        <!-- <img class="about-img" src="img/front-foto.jpg" alt="foto" width="250" height=""></img> -->
+        <div class="about-me-back"></div>
         <div class="about-text">
           <h2 class="about-title">About me</h2>
           <p class="about-txt">Я — Стрекалова Дарья, психологический консультант, коуч, сертифицированный специалист по
@@ -115,8 +128,8 @@
         <div class="directions-item">
           <details class="direction-item">
             <summary class="diretion-title">Гендерное консультирование
-              <svg class="diretion-icon" width="25" height="25">
-                <use xlink:href="img/icons.svg#plus"></use>
+              <svg class="direction-icon" width="20" height="20">
+                <use xlink:href="img/icons.svg#arrow"></use>
               </svg>
             </summary>
             <ul class="direction-list">
@@ -128,8 +141,8 @@
           </details>
           <details class="direction-item">
             <summary class="diretion-title">Лайф коучинг
-              <svg class="diretion-icon" width="25" height="25">
-                <use xlink:href="img/icons.svg#plus"></use>
+              <svg class="direction-icon" width="20" height="20">
+                <use xlink:href="img/icons.svg#arrow"></use>
               </svg>
             </summary>
             <ul class="direction-list">
@@ -141,8 +154,8 @@
           </details>
           <details class="direction-item">
             <summary class="diretion-title">Психологическое консультирование
-              <svg class="diretion-icon" width="25" height="25">
-                <use xlink:href="img/icons.svg#plus"></use>
+              <svg class="direction-icon" width="20" height="20">
+                <use xlink:href="img/icons.svg#arrow"></use>
               </svg>
             </summary>
             <ul class="direction-list">
@@ -194,6 +207,7 @@
             </div>
           </div>
         </div>
+        <div class="price-back"></div>
       </section>
       <section class="reviews" id="stories">
         <div class="reviews-title">Истории успеха</div>
@@ -306,8 +320,7 @@
         <div class="decided-title">Still Not Decided?</div>
         <div class="decided-item">Individual consultation is right for you</div>
         <a href="#" class="learn-more">Ask for Individual Consultation</a>
-      </section>
-      <section class="video">
+        <div class="decided-back"></div>
         <div class="video-title">Example video</div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1oIJspH6Qgo" frameborder="0"
           allow="accelerometer; autoplay=0; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -319,61 +332,65 @@
           <div class="contact-my">
             <div class="my-title">Телефон:</div>
             <a class="my-txt" href="tel:+79778533851">+79778533851</a>
-          <div class="my-title">Почта:</div>
-          <a class="my-txt" href="mailto:Strekalova.consultant@gmail.com">Strekalova.consultant@gmail.com</a>
-          <div class="my-social-block">
-            <div class="my-social">
-              <img class="my-social-icon" src="img/whatsapp(2).svg" alt="whatsapp-logo">
-              <a href=" https://wa.me/79778533851" class="my-social-txt">WhatsApp</a>
+            <div class="my-title">Почта:</div>
+            <a class="my-txt" href="mailto:Strekalova.consultant@gmail.com">Strekalova.consultant@gmail.com</a>
+            <div class="my-social-block">
+              <div class="my-social">
+                <img class="my-social-icon" src="img/whatsapp(2).svg" alt="whatsapp-logo">
+                <a href=" https://wa.me/79778533851" class="my-social-txt">WhatsApp</a>
+              </div>
+              <div class="my-social">
+                <img class="my-social-icon" src="img/telegram(2).svg" alt="telegram-logo">
+                <a href="tg://resolve?domain=@DariaStr" class="my-social-txt">Telegram</a>
+              </div>
             </div>
-            <div class="my-social">
-              <img class="my-social-icon" src="img/telegram(2).svg" alt="telegram-logo">
-              <a href="https://tg://resolve?domain=username" class="my-social-txt">Telegram</a>
+            <div class="my-social-block">
+              <div class="my-social">
+                <img class="my-social-icon" src="img/facebook(2).svg" alt="Facebook-logo">
+                <a href="https://www.facebook.com/daria.strekalova" class="my-social-txt">Facebook</a>
+              </div>
+              <div class="my-social">
+                <img class="my-social-icon" src="img/instagram(2).svg" alt="Instagram-logo">
+                <a href="https://www.instagram.com/po_ymy/" class="my-social-txt">Instagram</a>
+              </div>
             </div>
           </div>
-          <div class="my-social-block">
-            <div class="my-social">
-              <img class="my-social-icon" src="img/facebook(2).svg" alt="Facebook-logo">
-              <a href="https://www.facebook.com/daria.strekalova" class="my-social-txt">Facebook</a>
+          <form action="mail.php" method="POST" class="contact-form">
+            <legend class="form-title">Записаться на приём</legend>
+            <div class="form-group">
+              <label for="">Введите ваше имя</label>
+              <input required type="text" class="form-control" id="" name="user_name" placeholder="Имя*"
+                pattern="[A-Za-zА-Яа-яЁё]+$">
+              <span class="form__error">Это поле должно не содержать цифр</span>
             </div>
-            <div class="my-social">
-              <img class="my-social-icon" src="img/instagram(2).svg" alt="Instagram-logo">
-              <a href="https://www.instagram.com/po_ymy/" class="my-social-txt">Instagram</a>
+            <div class="form-group">
+              <label for="">Введите номер телефона</label>
+              <input required type="tel" class="form-control" id="" name="user_phone" placeholder="7 (999) 999 99 99*"
+                pattern="[0-9]+$">
+              <span class="form__error">Это поле должно содержать только цифры</span>
             </div>
-          </div>
-        </div>
-        <form action="mail.php" method="POST" class="contact-form">
-          <legend class="form-title">Записаться на приём</legend>
-          <div class="form-group">
-            <label for="">Введите ваше имя</label>
-            <input required type="text" class="form-control" id="" name="user_name" placeholder="Имя*" pattern="[A-Za-zА-Яа-яЁё]+$">
-            <span class="form__error">Это поле должно не содержать цифр</span>
-          </div>
-          <div class="form-group">
-            <label for="">Введите номер телефона</label>
-            <input required type="tel" class="form-control" id="" name="user_phone" placeholder="7 (999) 999 99 99*" pattern="[0-9]+$">
-            <span class="form__error">Это поле должно содержать только цифры</span>
-          </div>
-          <div class="form-group">
-            <label for="">Введите email</label>
-            <input type="email" class="form-control" id="" name="user_email" placeholder="E-mail*">
-            <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
-          </div>
-          <div class="form-group">
+            <div class="form-group">
+              <label for="">Введите email</label>
+              <input type="email" class="form-control" id="" name="user_email" placeholder="E-mail*">
+              <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+            </div>
+            <div class="form-group">
               <label for="">Введите Ваше сообщение</label>
-              <textarea class="form-control" name="user_txt" id="" cols="40" rows="2" placeholder="По желанию"></textarea>
-          </div>
-          <div>
-            <input type="submit" value="send">
-            <input type="reset" value="clear">
-          </div>
-        </form>
-  </div>
-  </section>
-  </main>
-  <footer class="footer">
-    <div class="footer-txt">&copy; Designed By StrStr, 2020, All Rights Reserved</div>
-  </footer>
+              <textarea class="form-control" name="user_txt" id="" cols="40" rows="2"
+                placeholder="По желанию"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="send" class="learn-more send">
+              <!-- <input type="reset" value="clear"> -->
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="tg://resolve?domain=Stratakaster" class="footer-txt">&copy; Designed By StrStr, 2020, All Rights
+        Reserved</a>
+    </footer>
   </div>
   <!---------- smooth scrolling start------------>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -432,5 +449,24 @@
     });
   </script>
   <!---------- smooth scrolling end------------>
+  <!--  transparent header start  -->
+  <script>
+    var scrolled;
+    window.onscroll = function () {
+      scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 400) {
+        $(".header").css({
+          "background": "white",
+        })
+      }
+      if (400 > scrolled) {
+        $(".header").css({
+          "background": "transparent"
+        })
+      }
+    }
+  </script>
+  <!--  transparent header end  -->
 </body>
+
 </html>
