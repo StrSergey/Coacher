@@ -20,12 +20,14 @@
 
 * {
     box-sizing: border-box;
+    position: relative;
 }
 
 body {
     font-family: nunito-regular, arial;
     background-color: #fff;
     user-select: none;
+    overflow-x: hidden;
 }
 
 .to-top {
@@ -42,23 +44,13 @@ body {
     fill: #f4b200;
 }
 
-.progress {
-    position: fixed;
-    left: 0;
-    top: 150px;
-    width: 0%;
-    height: 4px;
-    background-color: red;
-    z-index: 5;
-}
-
 .header {
     padding: 8px 50px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 4;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -258,11 +250,8 @@ body {
 }
 
 .back-women {
-    /* margin-top: 44px; */
     background-image: url(../img/bg-woman.png);
     background-position: left;
-    /* background-position-y: 0px; */
-    /* background-position: top center; */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 80%;
@@ -366,7 +355,7 @@ body {
     background-position: top left;
     height: 100%;
     overflow: hidden;
-    width: 100%;
+    width: 30%;
     z-index: -1;
 }
 
@@ -457,6 +446,7 @@ body {
 }
 
 .education-catalog {
+    padding-bottom: 10px;
     letter-spacing: 1.3px;
     font-family: nunito-regular, arial;
     color: rgba(0, 0, 0, .5);
@@ -643,6 +633,7 @@ details[open]:last-child ul {
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
     padding-top: 44px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
 }
@@ -661,6 +652,10 @@ details[open]:last-child ul {
     width: 300px;
     padding: 20px;
     text-align: center;
+    /* background-color: rgba(0, 0, 0, .1); */
+    background-color: #FFEAB2;    
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 .rewiew-title {
@@ -710,7 +705,7 @@ details[open]:last-child ul {
     opacity: 0.5;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 100%;
     overflow: hidden;
     width: 100%;
@@ -763,7 +758,6 @@ details[open]:last-child ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* width: 80%; */
     padding: 0 50px;
     margin: 0 70px;
     background-color: rgb(250, 249, 246);
@@ -796,7 +790,7 @@ details[open]:last-child ul {
 .my-title,
 .form-title {
     color: rgba(0, 0, 0, .9);
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 1.3px;
     font-family: nunito-bold, arial;
     display: flex;
@@ -823,14 +817,14 @@ details[open]:last-child ul {
 }
 
 .my-social-block {
-    display: flex;
+    display: column;
     width: 100%;
 }
 
 .my-social {
     display: flex;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .my-social:hover .my-social-txt {
