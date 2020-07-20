@@ -33,15 +33,57 @@ body {
 .to-top {
     box-sizing: border-box;
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     border: none !important;
     fill: rgba(0, 0, 0, .20);
     transition: 0.5s;
+    z-index: 10;
 }
 
 .to-top:hover {
     fill: #f4b200;
+}
+
+
+.wrap {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    margin: 5px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.wrap .upper,
+.wrap .middle,
+.wrap .bottom {
+    background-color: rgba(0, 0, 0, .5);
+    height: 3px;
+    width: 80%;
+    margin: 8px auto;
+    transform-origin: top right;
+    transition: 0.3s ease-out;
+    contain: "";
+    z-index: 12;
+}
+
+.wrap.active .upper {
+    transform: rotate(-45deg) translate(-4px, -6px);
+    height: 4px;
+}
+
+.wrap.active .bottom {
+    transform: rotate(45deg) translate(-4px, 1px);
+    height: 4px;
+}
+
+.wrap.active .middle {
+    opacity: 0;
 }
 
 .header {
@@ -261,6 +303,7 @@ body {
     z-index: 0;
     position: absolute;
 }
+
 /* ----------------help-you------------------------ */
 .help-you {
     flex-direction: column;
@@ -351,7 +394,7 @@ body {
     margin-top: 64px;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain ;
+    background-size: contain;
     background-position: top left;
     height: 100%;
     overflow: hidden;
@@ -653,7 +696,7 @@ details[open]:last-child ul {
     padding: 20px;
     text-align: center;
     /* background-color: rgba(0, 0, 0, .1); */
-    background-color: #FFEAB2;    
+    background-color: #FFEAB2;
     border-radius: 10px;
     margin: 0 10px;
 }
@@ -739,6 +782,7 @@ details[open]:last-child ul {
     width: 100%;
     padding: 0 50px;
     padding-bottom: 30px;
+    /* overflow-x: hidden; */
 }
 
 .video-title {
@@ -751,11 +795,26 @@ details[open]:last-child ul {
     text-align: center;
 }
 
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+  }
+  .video iframe {
+    position: absolute;
+    width: 100%;
+    max-width: 840px;
+    height: 100%;
+    max-height: 472.5px;
+    border-width: 0;
+    outline-width: 0;
+  }
 /* ----- contact ----- */
 
 .contact {
     display: flex;
-    flex-direction: column;
+    display: block;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
@@ -829,7 +888,7 @@ details[open]:last-child ul {
 
 .my-social:hover .my-social-txt {
     color: #f4b200;
-    
+
 }
 
 .my-social:hover .my-social-icon {
@@ -959,4 +1018,189 @@ input[type="tel"] {
 
 .footer-txt:hover {
     color: #f4b200;
+}
+
+@media (min-width: 1250px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .wrap {
+        display: block;
+    }
+
+    .header {
+        background-color: transparent!important;
+        padding: 0;
+        margin: 0;
+        padding-top: 70px;
+        flex-direction: row;
+    }
+
+    .header-list {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f4b200;
+        text-align: right;
+        height: 100%;
+        transform: translateX(200%);
+        transition: transform 0.6s;
+    }
+
+    .header-list.active {
+        transform: translateX(0%);
+    }
+
+    .header-list .header-link {
+        margin-top: 20px;
+    }
+
+    .header-list :last-child {
+        margin-bottom: 20px;
+    }
+
+    /* .header-list :last-child {
+        display: none;
+    } */
+
+    .back-women {
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .push-your-life {
+        padding: 144px 30px 100px 30px;
+    }
+
+    .push-your {
+        width: 60%;
+    }
+
+    .help-you {
+        padding: 0 30px;
+    }
+
+    .help-section {
+        display: block;
+    }
+
+    .help-icon {
+        fill: #f4b200;
+    }
+
+    .about-me {
+        padding: 100px 30px;
+    }
+
+    .about-me-back {
+        background-size: cover;
+        background-position: 80%;
+        width: 30%;
+    }
+
+    .about-text {
+        padding-left: 45%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .education {
+        padding: 0 30px;
+        padding-top: 30px;
+        flex-direction: column;
+    }
+
+    .education-schooling,  .education-patent{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .education-icon {
+        fill: #f4b200;
+    }
+
+    .directions {
+        padding: 0 30px;
+    }
+
+    .directions-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .directions-item {
+        width: 100%;
+    }
+
+    .direction-item {
+        width: 100%;
+    }
+
+    .direction-link {
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .price {
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    .price-service {
+        display: block;
+        /* width: 100%; */
+    }
+
+    .service-price {
+        width: 100%;
+    }
+
+    .reviews {
+        padding: 0 30px;
+    }
+
+    .contact {
+        padding: 0 30px;
+        margin: 0;
+    }
+
+    .contact-block {
+        display: block;
+    }
+
+    .contact-my {
+        width: 100%;
+    }
+
+    .my-social-block {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .my-social {
+        width: 40px;
+    }
+
+    .social-txt-href {
+        display: none;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
 }
