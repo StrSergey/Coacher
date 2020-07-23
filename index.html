@@ -20,12 +20,12 @@
         </svg>
       </a>
     </div>
+    <div class="wrap">
+      <div class="upper"></div>
+      <div class="middle"></div>
+      <div class="bottom"></div>
+    </div>
     <div class="header">
-      <div class="wrap">
-        <div class="upper"></div>
-        <div class="middle"></div>
-        <div class="bottom"></div>
-      </div>
       <div class="logo">Coacher</div>
       <div class="header-nav">
         <div class="header-list">
@@ -279,7 +279,7 @@
         <div class="video-title">Example video</div>
         <div class="video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/1oIJspH6Qgo" frameborder="0"
-          allow="accelerometer; autoplay=0; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            allow="accelerometer; autoplay=0; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
       <section class="contact" id="contact">
@@ -292,34 +292,24 @@
             <a class="my-txt" href="mailto:Strekalova.consultant@gmail.com">Strekalova.consultant@gmail.com</a>
             <div class="my-social-block">
               <div class="my-social">
-                <img class="my-social-icon" src="img/whatsapp(2).svg" alt="whatsapp-logo">
                 <a href=" https://wa.me/79778533851" class="my-social-txt">
+                  <img class="my-social-icon" src="img/whatsapp(2).svg" alt="whatsapp-logo">
                   <div class="social-txt-href">WhatsApp</div>
                 </a>
               </div>
               <div class="my-social">
-                <img class="my-social-icon" src="img/instagram(2).svg" alt="Instagram-logo">
                 <a href="https://www.instagram.com/po_ymy/" class="my-social-txt">
+                  <img class="my-social-icon" src="img/instagram(2).svg" alt="Instagram-logo">
                   <div class="social-txt-href">Instagram</div>
                 </a>
               </div>
               <div class="my-social">
-                <img class="my-social-icon" src="img/facebook(2).svg" alt="Facebook-logo">
                 <a href="https://www.facebook.com/daria.strekalova" class="my-social-txt">
-                <div class="social-txt-href">Facebook</div>
+                  <img class="my-social-icon" src="img/facebook(2).svg" alt="Facebook-logo">
+                  <div class="social-txt-href">Facebook</div>
                 </a>
               </div>
             </div>
-            <!-- <div class="my-social-block">
-              <div class="my-social">
-                <img class="my-social-icon" src="img/facebook(2).svg" alt="Facebook-logo">
-                <a href="https://www.facebook.com/daria.strekalova" class="my-social-txt">Facebook</a>
-              </div>
-              <div class="my-social">
-                <img class="my-social-icon" src="img/telegram(2).svg" alt="telegram-logo">
-                <a href="tg://resolve?domain=@DariaStr" class="my-social-txt">Telegram</a>
-              </div>
-            </div> -->
           </div>
           <form action="mail.php" method="POST" class="contact-form" data-10p-center="opacity:1;right:0px;">
             <legend class="form-title">Записаться на приём</legend>
@@ -429,6 +419,14 @@
         }
       })
     });
+    // автозакрытие меню 
+    jQuery(".header-link a").on("click", function () {
+      jQuery(".header").removeClass("active");
+    });
+
+    jQuery(".header-link a").on("click", function () {
+      jQuery(".wrap").removeClass("active");
+    });
   </script>
   <!--  transparent header start  -->
   <script>
@@ -448,17 +446,19 @@
     }
 
     const menuBtn = document.querySelector(".wrap");
-    const menu = document.querySelector(".header-list");
+    const menu = document.querySelector(".header");
 
-    menuBtn.addEventListener("click", function() {
+    menuBtn.addEventListener("click", function () {
       menu.classList.toggle("active");
-    })
+    });
 
     const menuBtnWrp = document.querySelector(".wrap");
     const menuWrp = document.querySelector(".wrap");
 
-    menuBtnWrp.addEventListener("click", function() {
+
+    menuBtnWrp.addEventListener("click", function () {
       menuWrp.classList.toggle("active");
+      console.log(111);
     })
   </script>
 </body>

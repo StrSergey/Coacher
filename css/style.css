@@ -907,12 +907,14 @@ details[open]:last-child ul {
     margin-top: 5px;
     display: flex;
     text-decoration: none;
+    align-items: center;
 }
 
 .my-social-icon {
     box-sizing: border-box;
     width: 40px;
     height: 40px;
+    margin-right: 10px;
 }
 
 .form-group {
@@ -1020,7 +1022,7 @@ input[type="tel"] {
     color: #f4b200;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1350px) {
     .container {
         width: 95%;
         margin: 0 auto;
@@ -1040,39 +1042,60 @@ input[type="tel"] {
     }
 
     .header {
-        background-color: transparent!important;
+        background-color: rgb(250, 249, 246)!important;
+        border-radius: 0 0 20px 20px;
         padding: 0;
+        padding-top: 50px;
         margin: 0;
-        padding-top: 70px;
-        flex-direction: row;
-    }
-
-    .header-list {
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        background-color: #f4b200;
-        text-align: right;
-        height: 100%;
-        transform: translateX(200%);
+        transform: translateY(-120%);
         transition: transform 0.6s;
     }
 
-    .header-list.active {
-        transform: translateX(0%);
+    .header.active {
+        transform: translateY(0%);
+    }
+
+    .header-nav {
+        padding: 0 10px;
+    }
+
+    .header-list {
+        flex-direction: column;
+        width: 100%;  
+        margin: 0;
+    }
+
+    .header-list .header-link:last-child {
+        margin: 0;
+        padding: 20px 0;
+        border: none;
     }
 
     .header-list .header-link {
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
     }
 
-    .header-list :last-child {
-        margin-bottom: 20px;
+    .header-list-link.active {
+        border:none;
     }
 
-    /* .header-list :last-child {
-        display: none;
-    } */
+    .header-list-link:hover {
+        border:none;
+    }
+
+    .header-link {
+        display: flex;
+        text-align: center;
+        margin: 0;
+    }
+
+    .header-list .header-list-link {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
 
     .back-women {
         background-size: cover;
