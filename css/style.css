@@ -529,6 +529,9 @@ summary .direction-icon {
     fill: rgba(0, 0, 0, .5);
     transition: 0.7s;
     rotate: 90deg;
+    width: 20px!important;
+    height: 20px!important;
+    flex-shrink: 0;
 }
 
 summary:hover .direction-icon {
@@ -537,6 +540,10 @@ summary:hover .direction-icon {
 
 details[open] .direction-list {
     animation: sweep .5s ease-in-out;
+}
+
+.direction-list-item {
+    padding-bottom: 6px;
 }
 
 @keyframes sweep {
@@ -667,7 +674,6 @@ details[open]:last-child ul {
     display: flex;
     flex-direction: column;
     padding: 0 50px;
-    /* background-color: #fff; */
 }
 
 .reviews-title {
@@ -695,7 +701,6 @@ details[open]:last-child ul {
     width: 300px;
     padding: 20px;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, .1); */
     background-color: #FFEAB2;
     border-radius: 10px;
     margin: 0 10px;
@@ -708,8 +713,8 @@ details[open]:last-child ul {
 }
 
 .review-avatar {
-    width: 20px;
-    height: 20px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -771,6 +776,7 @@ details[open]:last-child ul {
     transition: 0.5s;
     margin: 0;
     padding-bottom: 30px;
+    text-align: center;
 }
 
 /* ----- video ----- */
@@ -782,7 +788,6 @@ details[open]:last-child ul {
     width: 100%;
     padding: 0 50px;
     padding-bottom: 30px;
-    /* overflow-x: hidden; */
 }
 
 .video-title {
@@ -918,52 +923,63 @@ details[open]:last-child ul {
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
 }
 
 label {
-    text-align: left;
-    letter-spacing: 1.3px;
-    font-family: nunito-regular, arial;
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
     color: rgba(0, 0, 0, .5);
-    font-size: 15px;
-    padding-bottom: 2px;
-    margin-top: 10px;
-    user-select: text;
 }
 
-input {
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, .5);
-    border-radius: 10px;
+input, textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
     outline: none;
-}
-
-input:focus {
-    border: 1px solid #f4b200;
-}
-
-.form-group:hover label {
-    color: #f4b200;
-}
-
-textarea {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, .5);
-    border-radius: 10px;
     resize: none;
-    outline: none;
-    padding: 5px;
 }
 
-textarea:focus {
-    border: 1px solid #f4b200;
+input:focus ~ label,
+input:valid ~ label {
+    font-size: 12px;
+    transform: translateY(-20px);
 }
 
+input:invalid:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.form-group:hover input,
+.form-group:hover textarea {
+    border-bottom: 1px solid black;
+}
+
+textarea:focus ~ label,
+textarea:valid ~ label {
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+textarea:invalid:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+    transform: translateY(-20px);
+}
 
 .form__error {
-    color: red;
+    color: #FF7373;
     text-align: left;
     font-size: 12px;
     display: block;
@@ -972,7 +988,7 @@ textarea:focus {
 }
 
 input:invalid:not(:placeholder-shown) {
-    border-color: red;
+    border-color: #FF7373;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -981,10 +997,11 @@ input:invalid:not(:placeholder-shown) {
     box-shadow: none;
 }
 
-input:invalid:not(:placeholder-shown)+.form__error {
+input:invalid:not(:placeholder-shown) ~ .form__error {
     display: block;
 }
 
+textarea[type="text"],
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
@@ -1030,7 +1047,7 @@ input[type="tel"] {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1223px) {
     .logo {
         display: none;
     }
