@@ -285,6 +285,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    width: 100%;
     overflow: hidden;
     width: 100%;
     z-index: -1;
@@ -292,11 +293,12 @@ body {
 }
 
 .back-women {
-    background-image: url(../img/bg-woman.png);
+    background-image: url(../img/1st.svg);
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 80%;
+    margin-top: 64px;
     height: 100%;
     overflow: hidden;
     width: 100%;
@@ -390,7 +392,7 @@ body {
 }
 
 .about-me-back {
-    background-image: url(../img/front-foto.jpg);
+    background-image: url(../img/2nd.svg);
     margin-top: 64px;
     position: absolute;
     background-repeat: no-repeat;
@@ -1115,8 +1117,8 @@ input[type="tel"] {
     }
 
     .back-women {
-        background-size: cover;
-        background-position: 50%;
+        background-size: contain;
+        background-position: 120%;
     }
 
     .push-your-life {
@@ -1146,7 +1148,9 @@ input[type="tel"] {
     .about-me-back {
         background-size: cover;
         background-position: 80%;
-        width: 30%;
+        /* width: 30%; */
+        background-size: contain;
+        background-position: 120%;
     }
 
     .about-text {
