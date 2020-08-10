@@ -281,29 +281,27 @@ body {
 
 .back-right {
     background-image: url(../img/bg-right.png);
-    background-position: right;
+    position: absolute;
     background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
+    background-position: right;
+    background-size: cover;
+    
 }
 
 .back-women {
     background-image: url(../img/1st.svg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 80%;
-    margin-top: 64px;
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    z-index: 0;
     position: absolute;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-position: right 120%;
+    background-size: auto;
 }
 
 /* ----------------help-you------------------------ */
@@ -393,15 +391,15 @@ body {
 
 .about-me-back {
     background-image: url(../img/2nd.svg);
-    margin-top: 64px;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top left;
     height: 100%;
     overflow: hidden;
-    width: 30%;
     z-index: -1;
+
+    width: 100%;
+    background-position: left 120%;
+    background-size: auto;
 }
 
 /* .about-img {
@@ -531,8 +529,8 @@ summary .direction-icon {
     fill: rgba(0, 0, 0, .5);
     transition: 0.7s;
     rotate: 90deg;
-    width: 20px!important;
-    height: 20px!important;
+    width: 20px !important;
+    height: 20px !important;
     flex-shrink: 0;
 }
 
@@ -804,11 +802,13 @@ details[open]:last-child ul {
 
 .video {
     position: relative;
-    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    padding-bottom: 56.25%;
+    /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
     height: 0;
     overflow: hidden;
-  }
-  .video iframe {
+}
+
+.video iframe {
     position: absolute;
     width: 100%;
     max-width: 840px;
@@ -816,7 +816,8 @@ details[open]:last-child ul {
     max-height: 472.5px;
     border-width: 0;
     outline-width: 0;
-  }
+}
+
 /* ----- contact ----- */
 
 .contact {
@@ -941,7 +942,8 @@ label {
     color: rgba(0, 0, 0, .5);
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
@@ -953,13 +955,13 @@ input, textarea {
     resize: none;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+input:focus~label,
+input:valid~label {
     font-size: 12px;
     transform: translateY(-20px);
 }
 
-input:invalid:not(:placeholder-shown) ~ label {
+input:invalid:not(:placeholder-shown)~label {
     font-size: 12px;
     transform: translateY(-20px);
 }
@@ -969,13 +971,13 @@ input:invalid:not(:placeholder-shown) ~ label {
     border-bottom: 1px solid black;
 }
 
-textarea:focus ~ label,
-textarea:valid ~ label {
+textarea:focus~label,
+textarea:valid~label {
     font-size: 12px;
     transform: translateY(-20px);
 }
 
-textarea:invalid:not(:placeholder-shown) ~ label {
+textarea:invalid:not(:placeholder-shown)~label {
     font-size: 12px;
     transform: translateY(-20px);
 }
@@ -999,7 +1001,7 @@ input:invalid:not(:placeholder-shown) {
     box-shadow: none;
 }
 
-input:invalid:not(:placeholder-shown) ~ .form__error {
+input:invalid:not(:placeholder-shown)~.form__error {
     display: block;
 }
 
@@ -1055,13 +1057,13 @@ input[type="tel"] {
     }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 893px) {
     .wrap {
         display: block;
     }
 
     .header {
-        background-color: rgb(250, 249, 246)!important;
+        background-color: rgb(250, 249, 246) !important;
         border-radius: 0 0 20px 20px;
         padding: 0;
         padding-top: 50px;
@@ -1080,7 +1082,7 @@ input[type="tel"] {
 
     .header-list {
         flex-direction: column;
-        width: 100%;  
+        width: 100%;
         margin: 0;
     }
 
@@ -1097,11 +1099,11 @@ input[type="tel"] {
     }
 
     .header-list-link.active {
-        border:none;
+        border: none;
     }
 
     .header-list-link:hover {
-        border:none;
+        border: none;
     }
 
     .header-link {
@@ -1114,11 +1116,6 @@ input[type="tel"] {
         width: 100%;
         margin: 0;
         padding: 20px;
-    }
-
-    .back-women {
-        background-size: contain;
-        background-position: 120%;
     }
 
     .push-your-life {
@@ -1145,14 +1142,6 @@ input[type="tel"] {
         padding: 100px 30px;
     }
 
-    .about-me-back {
-        background-size: cover;
-        background-position: 80%;
-        /* width: 30%; */
-        background-size: contain;
-        background-position: 120%;
-    }
-
     .about-text {
         padding-left: 45%;
         width: 100%;
@@ -1165,7 +1154,8 @@ input[type="tel"] {
         flex-direction: column;
     }
 
-    .education-schooling,  .education-patent{
+    .education-schooling,
+    .education-patent {
         flex-direction: column;
         width: 100%;
     }
