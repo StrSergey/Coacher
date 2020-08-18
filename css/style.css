@@ -148,6 +148,19 @@ body {
     opacity: 0.6;
 }
 
+.header-list-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+    border-bottom: 1.5px solid var(--txtColor2);
+    opacity: 0.9;
+    transform: scaleX(0);
+}
+
 .header-list-link.active {
     color: var(--txtColor2);
     border-bottom: 1.5px solid var(--txtColor2);
@@ -156,8 +169,12 @@ body {
 
 .header-list-link:hover {
     color: var(--txtColor2);
-    border-bottom: 1.5px solid var(--txtColor2);
     opacity: 0.9;
+}
+
+.header-list-link:hover:before {
+    transform: scaleX(1);
+    transition: transform 0.5s;
 }
 
 .header-list-btn {

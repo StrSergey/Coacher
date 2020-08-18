@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <div>
-      <a href="#home" class="to-top header-list-link wow slideInLeft">
+      <a href="#home" class="to-top wow slideInLeft">
         <svg class="to-top-icon" width="40" height="40">
           <use xlink:href="img/icons.svg#up-arrow"></use>
         </svg>
@@ -386,6 +386,18 @@
 
     $(document).ready(function () {
       $("a.header-list-btn").click(function () {
+        $("html, body").animate({
+          scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+          duration: 1000,
+          easing: "swing"
+        });
+        return false;
+      });
+    });
+
+    $(document).ready(function () {
+      $("a.to-top").click(function () {
         $("html, body").animate({
           scrollTop: $($(this).attr("href")).offset().top + "px"
         }, {
