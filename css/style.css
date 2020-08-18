@@ -302,7 +302,7 @@ body {
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 80%;
+    background-position: 90%;
     height: 100%;
     overflow: hidden;
     width: 100%;
@@ -1085,6 +1085,7 @@ input[type="tel"] {
 
     .push-your {
         width: 60%;
+        min-width: 186px!important;
     }
 
     .help-you {
