@@ -1,10 +1,12 @@
 :root {
-    --bgColor1: #FFFEEC;
+    /* --bgColor1: #FFFEEC; */
+    --bgColor1: #FFFEE6;
     /* --bgColor2: #F8FAF2; */
     --bgColor2: #FFFFFF;
     --txtColor1: #DAD6DD;
     --txtColor2: #4F4C6B;
     --btnColor1: #E2E2C6;
+    /* --btnColor1: #E2E2B4; */
     --btnColor2: #A69F72;
 }
 
@@ -476,6 +478,7 @@ summary {
     padding: 12px;
     display: flex;
     justify-content: space-between;
+    outline: none;
 }
 
 summary .direction-icon {
